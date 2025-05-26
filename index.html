@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ash Accessories - Elegant & Luxury</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background-color: #0a0a0a;
+      border-bottom: 1px solid #2c2c2c;
+      position: relative;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #fff;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0a0a0a;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5rem 3rem;
+      background: linear-gradient(to right, #0f0f0f 60%, #1a1a1a);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 130%;
+      height: 100%;
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.15), transparent 70%);
+      z-index: 0;
+    }
+
+    .hero-text {
+      max-width: 50%;
+      z-index: 1;
+    }
+
+    .hero-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .hero-text p {
+      margin: 1rem 0;
+      color: #cccccc;
+      font-size: 1.2rem;
+    }
+
+    .shop-btn {
+      background-color: #ffffff;
+      color: #0f0f0f;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .shop-btn:hover {
+      background-color: #d4af37;
+      color: #000;
+    }
+
+    .hero-image {
+      width: 40%;
+      max-width: 420px;
+      z-index: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text, .hero-image {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .hero-text {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ASH ACCESSORIES</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="navbar">
+      <a href="#">COLLECTION</a>
+      <a href="#">ABOUT</a>
+      <a href="#">STORES</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Elegant & Luxury</h2>
+      <p>Remarkable Jewellery for the modern women</p>
+      <button class="shop-btn">SHOP COLLECTION</button>
+    </div>
+    <div class="hero-image">
+      <img src="https://img.freepik.com/premium-photo/beautiful-model-diamond-jewellery_1270257-430.jpg" alt="Model with jewelry" />
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
