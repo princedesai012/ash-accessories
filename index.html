@@ -255,6 +255,59 @@
       transform: scale(1.1);
       box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
     }
+    .product-showcase {
+      padding: 4rem 2rem;
+      background-color: #141414;
+      text-align: center;
+    }
+    
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #d4af37;
+      margin-bottom: 2rem;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .product-card {
+      background-color: #fff;
+      color: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+    }
+    
+    .product-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .product-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .product-card .price {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.2rem;
+    }
+    
 
     /* Responsive */
     @media (max-width: 768px) {
@@ -310,6 +363,27 @@
       <img src="https://img.freepik.com/premium-photo/beautiful-model-diamond-jewellery_1270257-430.jpg" alt="Luxury gold jewelry" />
     </div>
   </section>
+  <section class="product-showcase">
+    <h2 class="section-title">Our Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://accessorizelondon.in/cdn/shop/products/MA-38400881001_1.jpg?v=1657022976" alt="Gold Bracelet">
+        <h3>Gold Bracelet</h3>
+        <p class="price">₹799</p>
+      </div>
+      <div class="product-card">
+        <img src="https://therover.in/cdn/shop/files/IMG-20240716_224151.jpg?v=1721149928" alt="Earrings">
+        <h3>Statement Earrings</h3>
+        <p class="price">₹499</p>
+      </div>
+      <div class="product-card">
+        <img src="https://www.tarinika.in/cdn/shop/files/TNX0282X_2bcda1ab-5ce2-47a4-b217-d5685a26b3da.jpg?v=1697434618&width=1780.jpg" alt="Necklace">
+        <h3>Layered Necklace</h3>
+        <p class="price">₹1,299</p>
+      </div>
+    </div>
+  </section>
+  
 
   <!-- WhatsApp Float Button -->
   <a href="https://wa.me/919714865744?text=Hi%20Ash%20Accessories!%20I%20want%20to%20buy%20your%20jewelry." class="whatsapp-float" target="_blank">
